@@ -7,27 +7,27 @@
 <div class = "col-lg-6">
 	<form method = "POST" action = "edit_admin_query.php?admin_id=<?php echo $fedit_admin['admin_id']?>" enctype = "multipart/form-data">
 		<div class = "form-group">
-			<label>Username:</label>
+			<label>Tài khoàn:</label>
 			<input type = "text" value = "<?php echo $fedit_admin['username']?>" required = "required" name = "username" class = "form-control" />
 		</div>	
 		<div class = "form-group">	
-			<label>Password:</label>
+			<label>Mật khẩu:</label>
 			<input type = "password" value = "<?php echo $fedit_admin['password']?>"  maxlength = "12" name = "password" required = "required" class = "form-control" />
 		</div>	
 		<div class = "form-group">	
-			<label>Firstname:</label>
+			<label>Họ:</label>
 			<input type = "text" value = "<?php echo $fedit_admin['firstname']?>"  name = "firstname" required = "required" class = "form-control" />
 		</div>	
 		<div class = "form-group">	
-			<label>Middlename:</label>
-			<input type = "text" value = "<?php echo $fedit_admin['middlename']?>"  name = "middlename" placeholder = "(Optional)" class = "form-control" />
+			<label>Tên đệm:</label>
+			<input type = "text" value = "<?php echo $fedit_admin['middlename']?>"  name = "middlename" placeholder = "(Không bắt buộc)" class = "form-control" />
 		</div>	
 		<div class = "form-group">	
-			<label>Lastname:</label>
+			<label>Tên:</label>
 			<input type = "text" value = "<?php echo $fedit_admin['lastname']?>"  required = "required" name = "lastname" class = "form-control" />
 		</div>
 		<div class = "form-group">	
-			<button class = "btn btn-warning" name = "edit_admin"><span class = "glyphicon glyphicon-edit"></span> Save Changes</button>
+			<button class = "btn btn-warning" name = "edit_admin"><span class = "glyphicon glyphicon-edit"></span> Lưu thay đổi</button>
 		</div>
 	</form>		
 </div>	

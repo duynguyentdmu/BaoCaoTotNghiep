@@ -4,7 +4,7 @@
 ?>	
 <html lang = "eng">
 	<head>
-		<title>Library System</title>
+		<title>HỆ THỐNG QUẢN LÝ THƯ VIỆN THPT NGUYỄN TRÃI</title>
 		<meta charset = "utf-8" />
 		<meta name = "viewport" content = "width=device-width, initial-scale=1" />
 		<link rel = "stylesheet" type = "text/css" href = "css/bootstrap.css" />
@@ -15,7 +15,7 @@
 			<div class = "container-fluid">
 				<div class = "navbar-header">
 					<img src = "images/logo.png" width = "50px" height = "50px" />
-					<h4 class = "navbar-text navbar-right">Library System</h4>
+					<h4 class = "navbar-text navbar-right">QUẢN LÝ SÁCH TRONG THƯ VIỆN</h4>
 				</div>
 			</div>
 		</nav>
@@ -46,21 +46,23 @@
 			</div>
 			<div class = "col-lg-1"></div>
 			<div class = "col-lg-9 well" style = "margin-top:60px;">
-				<div class = "alert alert-info">Book</div>
-					<button id = "add_book" type = "button" class = "btn btn-primary"><span class = "glyphicon glyphicon-plus"></span> Add new</button>
-					<button id = "show_book" type = "button" style = "display:none;" class = "btn btn-success"><span class = "glyphicon glyphicon-circle-arrow-left"></span> Back</button>
+				<div class = "alert alert-info">Quản Lý Sách</div>
+					<button id = "add_book" type = "button" class = "btn btn-primary"><span class = "glyphicon glyphicon-plus"></span> Thêm</button>
+					<button id = "show_book" type = "button" style = "display:none;" class = "btn btn-success"><span class = "glyphicon glyphicon-circle-arrow-left"></span> Quay Lại</button>
 					<br />
 					<br />
 					<div id = "book_table">
 						<table id = "table" class = "table table-bordered">
 							<thead class = "alert-success">
 								<tr>
-									<th>Book Title</th>
-									<th>Category</th>
-									<th>Author</th>
-									<th>Date Published</th>
-									<th>Available</th>
-									<th>Action</th>
+                                    <th>Mã sách</th>
+									<th>Tiêu đề</th>
+									<th>Thể loại</th>
+									<th>Tác giả</th>
+                                    <th>Mô tả</th>
+									<th>Ngày xuất bản</th>
+									<th>Số lượng</th>
+									<th>Thao tác</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -70,12 +72,14 @@
 										
 								?>
 								<tr>
+                                    <td><?php echo $fbook['book_id']?></td>
 									<td><?php echo $fbook['book_title']?></td>
 									<td><?php echo $fbook['book_category']?></td>
 									<td><?php echo $fbook['book_author']?></td>
+                                    <td><?php echo $fbook['book_description']?></td>
 									<td><?php echo date("m-d-Y", strtotime($fbook['date_publish']))?></td>
 									<td><?php echo $fbook['qty']?></td>
-									<td><a class = "btn btn-danger delbook_id" value = "<?php echo $fbook['book_id']?>"><span class = "glyphicon glyphicon-remove"></span> Delete</a> <a value = "<?php echo $fbook['book_id']?>" class = "btn btn-warning ebook_id"><span class = "glyphicon glyphicon-edit"></span> Edit</a></td>
+									<td><a class = "btn btn-danger delbook_id" value = "<?php echo $fbook['book_id']?>"><span class = "glyphicon glyphicon-remove"></span> Xóa</a> <a value = "<?php echo $fbook['book_id']?>" class = "btn btn-warning ebook_id"><span class = "glyphicon glyphicon-edit"></span> Sửa</a></td>
 								</tr>
 								<?php
 									}
@@ -89,31 +93,31 @@
 						<div class = "col-lg-6">
 							<form method = "POST" action = "save_book_query.php" enctype = "multipart/form-data">
 								<div class = "form-group">
-									<label>Book Title:</label>
+									<label>Tiêu đề:</label>
 									<input type = "text" name = "book_title" required = "required" class = "form-control" />
 								</div>
 								<div class = "form-group">
-									<label>Book Description:</label>
+									<label>Mô tả:</label>
 									<input type = "text" name = "book_desc" class = "form-control" />
 								</div>
 								<div class = "form-group">
-									<label>Book Category:</label>
+									<label>Thể loại:</label>
 									<input type = "text" name = "book_category" class = "form-control" required = "required"/>
 								</div>
 								<div class = "form-group">
-									<label>Book Author:</label>
+									<label>Tác giả:</label>
 									<input type = "text" name = "book_author" class = "form-control" required = "required" />
 								</div>
 								<div class = "form-group">
-									<label>Date Published:</label>
+									<label>Ngày xuất bản:</label>
 									<input type = "date" name = "date_publish" required = "required" class = "form-control" />
 								</div>
 								<div class = "form-group">
-									<label>Quantity:</label>
+									<label>Số lượng:</label>
 									<input type = "number" min = "0" name = "qty" required = "required" class = "form-control" />
 								</div>
 								<div class = "form-group">
-									<button name = "save_book" class = "btn btn-primary"><span class = "glyphicon glyphicon-save"></span> Submit</button>
+									<button name = "save_book" class = "btn btn-primary"><span class = "glyphicon glyphicon-save"></span> Lưu</button>
 								</div>
 							</form>		
 						</div>	
@@ -125,7 +129,7 @@
 		<br />
 		<nav class = "navbar navbar-default navbar-fixed-bottom">
 			<div class = "container-fluid">
-				<label class = "navbar-text pull-right">Hệ thống quản lý thư viện THPT ABC</label>
+                <label class = "navbar-text pull-right">phần chân trang nằm trong home.php</label>
 			</div>
 		</nav>
 	</body>
@@ -157,7 +161,7 @@
 	</script>
 	<script type = "text/javascript">
 		$(document).ready(function(){
-			$result = $('<center><label>Deleting...</label></center>');
+			$result = $('<center><label>Đang Xóa Sách ... </label></center>');
 			$('.delbook_id').click(function(){
 				$book_id = $(this).attr('value');
 				$(this).parents('td').empty().append($result);

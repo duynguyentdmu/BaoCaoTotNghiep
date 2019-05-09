@@ -20,7 +20,7 @@
 			$conn->query("UPDATE `student` SET `student_no` = '$student_no', `firstname` = '$firstname', `middlename` = '$middlename', `lastname` = '$lastname', `course` = '$course', `section` = '$section' WHERE `student_id` = '$_REQUEST[student_id]'") or die(mysqli_error());
 			echo'
 				<script type = "text/javascript">
-					alert("Save Changes");
+					alert("Lưu thay đổi");
 					window.location = "student.php";
 				</script>
 			';

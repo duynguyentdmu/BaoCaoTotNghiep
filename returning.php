@@ -4,7 +4,7 @@
 ?>	
 <html lang = "eng">
 	<head>
-		<title>Library System</title>
+		<title>HỆ THỐNG QUẢN LÝ THƯ VIỆN THPT NGUYỄN TRÃI</title>
 		<meta charset = "utf-8" />
 		<meta name = "viewport" content = "width=device-width, initial-scale=1" />
 		<link rel = "stylesheet" type = "text/css" href = "css/bootstrap.css" />
@@ -16,7 +16,7 @@
 			<div class = "container-fluid">
 				<div class = "navbar-header">
 					<img src = "images/logo.png" width = "50px" height = "50px" />
-					<h4 class = "navbar-text navbar-right">Library System</h4>
+					<h4 class = "navbar-text navbar-right">QUẢN LÝ TRẢ SÁCH</h4>
 				</div>
 			</div>
 		</nav>
@@ -48,17 +48,17 @@
 			
 			<div class = "col-lg-1"></div>
 			<div class = "col-lg-9 well" style = "margin-top:60px;">
-				<div class = "alert alert-info">Transaction / Returning</div>
+				<div class = "alert alert-info">Quản lý trả sách</div>
 				<form method = "POST" action = "return.php" enctype = "multipart/form-data">	
 					<table id = "table" class = "table table-bordered">
 						<thead class = "alert-success">
 							<tr>
-								<th>Student</th>
-								<th>Book Title</th>
-								<th>Book Author</th>
-								<th>Status</th>
-								<th>Date Returned</th>
-								<th>Action</th>
+								<th>Học sinh</th>
+								<th>Tiêu đề sách</th>
+								<th>Tác giả</th>
+								<th>Trạng thái</th>
+								<th>Ngày trả sách</th>
+								<th>Thao tác</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -89,13 +89,13 @@
 									?>
 								</td>
 								<td><?php echo $freturn['status']?></td>
-								<td><?php echo date("m-d-Y", strtotime($freturn['date']))?></td>
+								<td><?php echo date("d-m-Y", strtotime($freturn['date']))?></td>
 								<td>
 									<?php 
 										if($freturn['status'] == 'Returned'){
-										echo '<center><button disabled = "disabled" class = "btn btn-primary" type = "button" href = "#" data-toggle = "modal" data-target = "#return"><span class = "glyphicon glyphicon-check"></span> Returned</button></center>';	
+										echo '<center><button disabled = "disabled" class = "btn btn-primary" type = "button" href = "#" data-toggle = "modal" data-target = "#return"><span class = "glyphicon glyphicon-check"></span> Đã hoàn trả</button></center>';
 										}else{
-										echo '<input type = "hidden" name = "borrow_id" value = "'.$freturn['borrow_id'].'"/><center><button class = "btn btn-primary" data-toggle = "modal" data-target = "#return"><span class = "glyphicon glyphicon-unchecked"></span> Return</button></center>';
+										echo '<input type = "hidden" name = "borrow_id" value = "'.$freturn['borrow_id'].'"/><center><button class = "btn btn-primary" data-toggle = "modal" data-target = "#return"><span class = "glyphicon glyphicon-unchecked"></span> Trả sách</button></center>';
 										}
 									?>
 								</td>
@@ -112,8 +112,8 @@
 		</div>
 		<nav class = "navbar navbar-default navbar-fixed-bottom">
 			<div class = "container-fluid">
-				<label class = "navbar-text pull-left">Developed By: CHMSC TEAM - Alijis</label>
-				<label class = "navbar-text pull-right">Hệ thống quản lý thư viện THPT ABC</label>
+				<!--<label class = "navbar-text pull-left">Developed By: CHMSC TEAM - Alijis</label>-->
+                <label class = "navbar-text pull-right">phần chân trang nằm trong home.php</label>
 			</div>
 		</nav>
 	</body>

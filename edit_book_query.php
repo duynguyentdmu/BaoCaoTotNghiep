@@ -10,7 +10,7 @@
 		$conn->query("UPDATE `book` SET `book_title` = '$book_title', `book_description` = '$book_desc', `book_category` = '$book_category', `book_author` = '$book_author', `date_publish` = '$date_publish', `qty` = '$qty' WHERE `book_id` = '$_REQUEST[book_id]'") or die(mysqli_error());
 		echo '
 			<script type = "text/javascript">
-				alert("Save Changes");
+				alert("Lưu thay đổi");
 				window.location = "book.php";
 			</script>
 		';

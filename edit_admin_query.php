@@ -11,7 +11,7 @@
 		if($v_admin == 1){
 			echo '
 				<script type = "text/javascript">
-					alert("Username already taken");
+					alert("Tên người dùng đã được sử dụng");
 					window.location = "admin.php";
 				</script>
 			';
@@ -19,7 +19,7 @@
 			$conn->query("UPDATE `admin` SET `username` = '$username', `password` = '$password', `firstname` = '$firstname', `middlename` = '$middlename', `lastname` = '$lastname' WHERE `admin_id` = '$_REQUEST[admin_id]'") or die(mysqli_error());
 			echo '
 				<script type = "text/javascript">
-					alert("Save Changes");
+					alert("Lưu thay đổi");
 					window.location = "admin.php";
 				</script>
 			';

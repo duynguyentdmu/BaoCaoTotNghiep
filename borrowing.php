@@ -4,7 +4,7 @@
 ?>	
 <html lang = "eng">
 	<head>
-		<title>Library System</title>
+		<title>HỆ THỐNG QUẢN LÝ THƯ VIỆN THPT NGUYỄN TRÃI</title>
 		<meta charset = "utf-8" />
 		<meta name = "viewport" content = "width=device-width, initial-scale=1" />
 		<link rel = "stylesheet" type = "text/css" href = "css/bootstrap.css" />
@@ -16,7 +16,7 @@
 			<div class = "container-fluid">
 				<div class = "navbar-header">
 					<img src = "images/logo.png" width = "50px" height = "50px" />
-					<h4 class = "navbar-text navbar-right">Library System</h4>
+					<h4 class = "navbar-text navbar-right">QUẢN LÝ MƯỢN SÁCH</h4>
 				</div>
 			</div>
 		</nav>
@@ -47,13 +47,13 @@
 			</div>
 			<div class = "col-lg-1"></div>
 			<div class = "col-lg-9 well" style = "margin-top:60px;">
-				<div class = "alert alert-info">Transaction / Borrowing</div>
+				<div class = "alert alert-info">Quản lý mượn sách</div>
 				<form method = "POST" action = "borrow.php" enctype = "multipart/form-data">
 					<div class = "form-group pull-left">	
-						<label>Student Name:</label>
+						<label>Tên học sinh:</label>
 						<br />
 						<select name = "student_no" id = "student">
-							<option value = "" selected = "selected" disabled = "disabled">Select an option</option>
+							<option value = "" selected = "selected" disabled = "disabled">Chọn học sinh</option>
 							<?php
 								$qborrow = $conn->query("SELECT * FROM `student` ORDER BY `lastname`") or die(mysqli_error());
 								while($fborrow = $qborrow->fetch_array()){
@@ -65,18 +65,18 @@
 						</select>
 					</div>
 					<div class = "form-group pull-right">	
-						<button name = "save_borrow" class = "btn btn-primary"><span class = "glyphicon glyphicon-thumbs-up"></span> Borrow</button>
+						<button name = "save_borrow" class = "btn btn-primary"><span class = "glyphicon glyphicon-thumbs-up"></span> Xác Nhận Mượn</button>
 					</div>
 					<table id = "table" class = "table table-bordered">
 						<thead class = "alert-success">
 							<tr>
-								<th>Select</th>
-								<th>Book Title</th>
-								<th>Book Category</th>
-								<th>Book Author</th>
-								<th>Date Published</th>
-								<th>Quantity</th>
-								<th>Left</th>
+								<th>Chọn sách</th>
+								<th>Tiêu đề</th>
+								<th>Thể loại</th>
+								<th>Tác giả</th>
+								<th>Ngày xuất bản</th>
+								<th>Số lượng</th>
+								<th>Còn lại</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -91,7 +91,7 @@
 								<td>
 									<?php
 										if($total == 0){
-											echo "<center><label class = 'text-danger'>Not Available</label></center>";
+											echo "<center><label class = 'text-danger'>Không có sẵn</label></center>";
 										}else{
 											echo '<input type = "hidden" name = "book_id[]" value = "'.$f_book['book_id'].'"><center><input type = "checkbox" name = "selector[]" value = "1"></center>';
 										}
@@ -114,7 +114,7 @@
 		</div>
 		<nav class = "navbar navbar-default navbar-fixed-bottom">
 			<div class = "container-fluid">
-				<label class = "navbar-text pull-right">Hệ thống quản lý thư viện THPT ABC</label>
+                <label class = "navbar-text pull-right">phần chân trang nằm trong home.php</label>
 			</div>
 		</nav>
 	</body>

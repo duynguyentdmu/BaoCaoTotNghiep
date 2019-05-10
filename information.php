@@ -18,7 +18,7 @@ require_once 'valid.php';
     <div class = "container-fluid">
         <div class = "navbar-header">
             <img src = "images/logo.png" width = "50px" height = "50px" />
-            <h4 class = "navbar-text navbar-right">THÔNG TIN THƯ VIỆN TRƯỜNG THPT NGUYỄN TRÃI</h4>
+            <h4 class = "navbar-text navbar-right">THÔNG TIN THƯ VIỆN TRƯỜNG THPT ABC</h4>
         </div>
     </div>
 </nav>
@@ -32,48 +32,25 @@ require_once 'valid.php';
         </div>
         <hr style = "border:1px dotted #d3d3d3;"/>
         <ul id = "menu" class = "nav menu">
-            <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "home.php"><i class = "glyphicon glyphicon-home"></i> Trang Chủ</a></li>
-            <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "information.php"><i class = "glyphicon glyphicon-home"></i> Giới Thiệu</a></li>
-            <!--<li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = ""><i class = "glyphicon glyphicon-tasks"></i> QL Tài Khoản</a> -->
-            <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "admin.php"><i class = "glyphicon glyphicon-tasks"></i> Người Quản Lý</a></li>
-            <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "student.php"><i class = "glyphicon glyphicon-tasks"></i> Học Sinh́</a></li>
-            <!--<ul style = "list-style-type:none;">
-                <li><a href = "admin.php" style = "font-size:15px;"><i class = "glyphicon glyphicon-user"></i> Quản Lý</a></li>
-                <li><a href = "student.php" style = "font-size:15px;"><i class = "glyphicon glyphicon-user"></i> Học Sinh</a></li>
-            </ul>
-        </li>-->
-            <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "book.php"><i class = "glyphicon glyphicon-book"></i> QL Sách</a></li>
-            <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "borrowing.php"><i class = "glyphicon glyphicon-book"></i> Mượn Sách</a></li>
-            <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "returning.php"><i class = "glyphicon glyphicon-book"></i> Trả Sách</a></li>
-
-            <!--   <li><a href = "borrowing.php" style = "font-size:15px;"><i class = "glyphicon glyphicon-random"></i> Mượn Sách</a></li>
-               <li><a href = "returning.php" style = "font-size:15px;"><i class = "glyphicon glyphicon-random"></i> Trả Sách</a></li>-->
-
-            <!--Library System <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = ""><i class = "glyphicon glyphicon-th"></i> Thao Tác</a>
-               <ul style = "list-style-type:none;">
-                   <li><a href = "borrowing.php" style = "font-size:15px;"><i class = "glyphicon glyphicon-random"></i> Mượn Sách</a></li>
-                   <li><a href = "returning.php" style = "font-size:15px;"><i class = "glyphicon glyphicon-random"></i> Trả Sách</a></li>
-               </ul>-->
-            </li>
-            <li><a  style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = ""><i class = "glyphicon glyphicon-cog"></i> Cài Đặt</a>
-                <ul style = "list-style-type:none;">
-                    <li><a style = "font-size:15px;" href = "logout.php"><i class = "glyphicon glyphicon-log-out"></i> Đăng Xuất</a></li>
-                </ul>
-            </li>
-        </ul>
+					<li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "home.php"><i class = "glyphicon glyphicon-home"></i> Trang Chủ</a></li>
+                    <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "information.php"><i class = "glyphicon glyphicon-home"></i> Giới Thiệu</a></li>
+                    <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "admin.php"><i class = "glyphicon glyphicon-tasks"></i> Người Quản Lý</a></li>
+                    <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "student.php"><i class = "glyphicon glyphicon-tasks"></i> Học Sinh́</a></li>
+					<li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "book.php"><i class = "glyphicon glyphicon-book"></i> QL Sách</a></li>
+                    <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "borrowing.php"><i class = "glyphicon glyphicon-book"></i> Mượn Sách</a></li>
+                    <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "returning.php"><i class = "glyphicon glyphicon-book"></i> Trả Sách</a></li>
+					</li>
+					<li><a  style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = ""><i class = "glyphicon glyphicon-cog"></i> Cài Đặt</a>
+						<ul style = "list-style-type:none;">
+							<li><a style = "font-size:15px;" href = "logout.php"><i class = "glyphicon glyphicon-log-out"></i> Đăng Xuất</a></li>
+						</ul>
+					</li>
+				</ul>
     </div>
     <div class = "col-lg-1"></div>
     <div class = "col-lg-9 well" style = "margin-top:60px;">
         <!--<img src = "images/back2.jpg" height = "400px" width = "100%" /> -->
         <!-- Start WOWSlider.com BODY section -->
-
-
-
-        <label><h1>GIỚI THIỆU THƯ VIỆN TRƯỜNG THPT NGUYỄN TRÃI</h1></label>
-        <label><h3>1/trang login dang nhap la trang index.php</h3></label>
-        <label><h3>khi bam vao nut dang nhap thi duoc chuyen sang login.js</h3></label>
-        <label><h3>phan hien thi so luong dong cua muc duoc dat trong jquerry.datatable.js</h3></label>
-
 
 
                 <p><h2>Thư viện là kho tàng chứa tất cả của cải tinh thần của loài người.
@@ -117,7 +94,7 @@ require_once 'valid.php';
 </div>
 <nav class = "navbar navbar-default navbar-fixed-bottom">
     <div class = "container-fluid">
-        <label class = "navbar-text pull-right">HỆ THỐNG QUẢN LÝ THƯ VIỆN THPT NGUYỄN TRÃI</label>
+        <label class = "navbar-text pull-right">HỆ THỐNG QUẢN LÝ THƯ VIỆN THPT ABC</label>
     </div>
 </nav>
 </body>

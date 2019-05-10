@@ -4,7 +4,7 @@
 ?>	
 <html lang = "eng">
 	<head>
-		<title>HỆ THỐNG QUẢN LÝ THƯ VIỆN THPT NGUYỄN TRÃI</title>
+		<title>HỆ THỐNG QUẢN LÝ THƯ VIỆN THPT ABC</title>
 		<meta charset = "utf-8" />
 		<meta name = "viewport" content = "width=device-width, initial-scale=1" />
 		<link rel = "stylesheet" type = "text/css" href = "css/bootstrap.css" />
@@ -55,13 +55,13 @@
 						<table id = "table" class = "table table-bordered">
 							<thead class = "alert-success">
 								<tr>
-									<th>Mã học sinh:</th>
-									<th>Họ:</th>
-									<th>Tên đệm:</th>
-									<th>Tên:</th>
-									<th>Năm học:</th>
-									<th>Lớp:</th>
-									<th>Thao tác:</th>
+									<th>Mã học sinh</th>
+									<th>Họ</th>
+									<th>Tên đệm</th>
+									<th>Tên</th>
+									<th>Năm học</th>
+									<th>Lớp</th>
+									<th>Thao tác</th>
 								</tr>
 							</thead>
 							<tbody>

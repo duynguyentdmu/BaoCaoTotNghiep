@@ -4,7 +4,7 @@
 ?>	
 <html lang = "eng">
 	<head>
-		<title>HỆ THỐNG QUẢN LÝ THƯ VIỆN THPT NGUYỄN TRÃI</title>
+		<title>HỆ THỐNG QUẢN LÝ THƯ VIỆN THPT ABC</title>
 		<meta charset = "utf-8" />
 		<meta name = "viewport" content = "width=device-width, initial-scale=1" />
 		<link rel = "stylesheet" type = "text/css" href = "css/bootstrap.css" />
@@ -95,7 +95,7 @@
 										if($freturn['status'] == 'Returned'){
 										echo '<center><button disabled = "disabled" class = "btn btn-primary" type = "button" href = "#" data-toggle = "modal" data-target = "#return"><span class = "glyphicon glyphicon-check"></span> Đã hoàn trả</button></center>';
 										}else{
-										echo '<input type = "hidden" name = "borrow_id" value = "'.$freturn['borrow_id'].'"/><center><button class = "btn btn-primary" data-toggle = "modal" data-target = "#return"><span class = "glyphicon glyphicon-unchecked"></span> Trả sách</button></center>';
+										echo '<input type = "hidden" name = "borrow_id" value = "'.$freturn['borrow_id'].'"/><center><button class = "btn btn-primary" data-toggle = "modal" data-target = "#return"><span class = "glyphicon glyphicon-unchecked"></span> Hoàn trả sách</button></center>';
 										}
 									?>
 								</td>

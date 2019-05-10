@@ -3,7 +3,7 @@
 	if(!ISSET($_POST['student_no'])){	
 		echo '
 			<script type = "text/javascript">
-				alert("Select student name first");
+				alert("Chọn tên học sinh trước");
 				window.location = "borrowing.php";
 			</script>
 		';
@@ -11,7 +11,7 @@
 		if(!ISSET($_POST['selector'])){
 			echo '
 				<script type = "text/javascript">
-					alert("Selet a book first!");
+					alert("Chọn ít nhất một cuốn sách!");
 					window.location = "borrowing.php";
 				</script>
 			';
@@ -24,7 +24,7 @@
 				$conn->query("INSERT INTO `borrowing` VALUES('', '$book_id', '$student_no', '$book_qty', '$date', 'Borrowed')") or die(mysqli_error());
 				echo '
 					<script type = "text/javascript">
-						alert("Successfully Borrowed");
+						alert("Mượn thành công!");
 						window.location = "borrowing.php";
 					</script>
 				';

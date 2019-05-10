@@ -4,7 +4,7 @@
 ?>	
 <html lang = "eng">
 	<head>
-		<title>HỆ THỐNG QUẢN LÝ THƯ VIỆN THPT NGUYỄN TRÃI</title>
+		<title>HỆ THỐNG QUẢN LÝ THƯ VIỆN THPT ABC</title>
 		<meta charset = "utf-8" />
 		<meta name = "viewport" content = "width=device-width, initial-scale=1" />
 		<link rel = "stylesheet" type = "text/css" href = "css/bootstrap.css" />

@@ -23,11 +23,11 @@
 			<input type = "text" required = "required" value = "<?php echo $f_student['lastname']?>" name = "lastname" class = "form-control" />
 		</div>
 		<div class = "form-group">
-			<label>Khóa học:</label>
+			<label>Lớp:</label>
 			<input type = "text" required = "required" value = "<?php echo $f_student['course']?>" name = "course" class = "form-control" />
 		</div>	
 		<div class = "form-group">	
-			<label>Năm & Phần:</label>
+			<label>Năm học:</label>
 			<input type = "text" maxlength = "12" name = "section" value = "<?php echo $f_student['section']?>" required = "required" class = "form-control" />
 		</div>
 		<div class = "form-group">	

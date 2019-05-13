@@ -31,7 +31,8 @@
 				<ul id = "menu" class = "nav menu">
 					<li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "home.php"><i class = "glyphicon glyphicon-home"></i> Trang Chủ</a></li>
                     <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "information.php"><i class = "glyphicon glyphicon-home"></i> Giới Thiệu</a></li>
-                    <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "admin.php"><i class = "glyphicon glyphicon-tasks"></i> Người Quản Lý</a></li>
+					<li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "analysis.php"><i class = "glyphicon glyphicon-home"></i> Thống Kê</a></li> 
+				    <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "admin.php"><i class = "glyphicon glyphicon-tasks"></i> Người Quản Lý</a></li>
                     <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "student.php"><i class = "glyphicon glyphicon-tasks"></i> Học Sinh́</a></li>
 					<li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "book.php"><i class = "glyphicon glyphicon-book"></i> QL Sách</a></li>
                     <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "borrowing.php"><i class = "glyphicon glyphicon-book"></i> Mượn Sách</a></li>
@@ -55,7 +56,7 @@
 						<table id = "table" class = "table table-bordered">
 							<thead class = "alert-success">
 								<tr>
-                                    <th>Admin ID</th>
+                                    <th>Mã Admin</th>
 									<th>Tài khoản</th>
 									<th>Mật khẩu</th>
 									<th>Họ</th>
@@ -65,26 +66,26 @@
 								</tr>
 							</thead>
 							<tbody>
-							<?php
-								$q_admin = $conn->query("SELECT * FROM `admin`") or die(mysqli_error());
-								while($f_admin = $q_admin->fetch_array()){
-									
-							?>	
-								<tr class = "target">
-                                    <td><?php echo $f_admin['admin_id']?></td>
-									<td><?php echo $f_admin['username']?></td>
-									<td><?php echo md5($f_admin['password'])?></td>
-									<td><?php echo $f_admin['firstname']?></td>
-									<td><?php echo $f_admin['middlename']?></td>
-									<td><?php echo $f_admin['lastname']?></td>
-									<td>
-                                        <a href = "#" class = "btn btn-danger deladmin_id" value = "<?php echo $f_admin['admin_id']?>"><span class = "glyphicon glyphicon-remove"></span> Xóa</a>
-                                        <a href = "#" class = "btn btn-warning eadmin_id" value = "<?php echo $f_admin['admin_id']?>"><span class = "glyphicon glyphicon-edit"></span> Sửa</a>
-                                    </td>
-								</tr>
-							<?php
-								}
-							?>	
+								<?php
+									$q_admin = $conn->query("SELECT * FROM `admin`") or die(mysqli_error());
+									while($f_admin = $q_admin->fetch_array()){
+										
+								?>	
+									<tr class = "target">
+										<td><?php echo $f_admin['admin_id']?></td>
+										<td><?php echo $f_admin['username']?></td>
+										<td><?php echo md5($f_admin['password'])?></td>
+										<td><?php echo $f_admin['firstname']?></td>
+										<td><?php echo $f_admin['middlename']?></td>
+										<td><?php echo $f_admin['lastname']?></td>
+										<td>
+											<a href = "#" class = "btn btn-danger deladmin_id" value = "<?php echo $f_admin['admin_id']?>"><span class = "glyphicon glyphicon-remove"></span> Xóa</a>
+											<a href = "#" class = "btn btn-warning eadmin_id" value = "<?php echo $f_admin['admin_id']?>"><span class = "glyphicon glyphicon-edit"></span> Sửa</a>
+										</td>
+									</tr>
+								<?php
+									}
+								?>	
 							</tbody>
 						</table>
 					</div>
@@ -126,7 +127,7 @@
 		<br />
 		<nav class = "navbar navbar-default navbar-fixed-bottom">
 			<div class = "container-fluid">
-				<label class = "navbar-text pull-right">........</label>
+				<label class = "navbar-text pull-right">HỆ THỐNG QUẢN LÝ THƯ VIỆN THPT ABC</label>
 			</div>
 		</nav>
 	</body>

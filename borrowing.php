@@ -32,7 +32,8 @@
 				<ul id = "menu" class = "nav menu">
 					<li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "home.php"><i class = "glyphicon glyphicon-home"></i> Trang Chủ</a></li>
                     <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "information.php"><i class = "glyphicon glyphicon-home"></i> Giới Thiệu</a></li>
-                    <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "admin.php"><i class = "glyphicon glyphicon-tasks"></i> Người Quản Lý</a></li>
+                    <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "analysis.php"><i class = "glyphicon glyphicon-home"></i> Thống Kê</a></li> 
+					<li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "admin.php"><i class = "glyphicon glyphicon-tasks"></i> Người Quản Lý</a></li>
                     <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "student.php"><i class = "glyphicon glyphicon-tasks"></i> Học Sinh́</a></li>
 					<li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "book.php"><i class = "glyphicon glyphicon-book"></i> QL Sách</a></li>
                     <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "borrowing.php"><i class = "glyphicon glyphicon-book"></i> Mượn Sách</a></li>
@@ -63,6 +64,12 @@
 								}
 							?>
 						</select>
+						<!-- <p><br/>Số lượng 	<input type="text" id="txtsoluongsach" name="txtsoluongsach"  /></p> -->
+						<?php
+								$slsach= "txtsoluongsach";
+							?>
+
+
 					</div>
 					<div class = "form-group pull-right">	
 						<button name = "save_borrow" class = "btn btn-primary"><span class = "glyphicon glyphicon-thumbs-up"></span> Xác Nhận Mượn</button>
@@ -71,6 +78,7 @@
 						<thead class = "alert-success">
 							<tr>
 								<th>Chọn sách</th>
+								<th>Mã sách</th>
 								<th>Tiêu đề</th>
 								<th>Thể loại</th>
 								<th>Tác giả</th>
@@ -97,10 +105,11 @@
 										}
 									?>
 								</td>
+								<td><?php echo $f_book['book_id']?></td>
 								<td><?php echo $f_book['book_title']?></td>
 								<td><?php echo $f_book['book_category']?></td>
 								<td><?php echo $f_book['book_author']?></td>
-								<td><?php echo date("m-d-Y", strtotime($f_book['date_publish']))?></td>
+								<td><?php echo date("d-m-Y", strtotime($f_book['date_publish']))?></td>
 								<td><?php echo $f_book['qty']?></td>
 								<td><?php echo $total?></td>
 							</tr>
@@ -114,7 +123,7 @@
 		</div>
 		<nav class = "navbar navbar-default navbar-fixed-bottom">
 			<div class = "container-fluid">
-                <label class = "navbar-text pull-right">phần chân trang nằm trong home.php</label>
+                <label class = "navbar-text pull-right">HỆ THỐNG QUẢN LÝ THƯ VIỆN THPT ABC</label>
 			</div>
 		</nav>
 	</body>

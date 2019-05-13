@@ -12,7 +12,7 @@
 		if($vstudent['student_no'] == 1){
 			echo '
 				<script type = "text/javascript">
-					alert("Student ID already exist");
+					alert("ID sinh viên đã tồn tại");
 					window.location = "student.php";
 				</script>
 			';

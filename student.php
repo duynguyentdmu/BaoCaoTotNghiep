@@ -31,7 +31,8 @@
 				<ul id = "menu" class = "nav menu">
 					<li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "home.php"><i class = "glyphicon glyphicon-home"></i> Trang Chủ</a></li>
                     <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "information.php"><i class = "glyphicon glyphicon-home"></i> Giới Thiệu</a></li>
-                    <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "admin.php"><i class = "glyphicon glyphicon-tasks"></i> Người Quản Lý</a></li>
+					<li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "analysis.php"><i class = "glyphicon glyphicon-home"></i> Thống Kê</a></li> 
+				    <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "admin.php"><i class = "glyphicon glyphicon-tasks"></i> Người Quản Lý</a></li>
                     <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "student.php"><i class = "glyphicon glyphicon-tasks"></i> Học Sinh́</a></li>
 					<li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "book.php"><i class = "glyphicon glyphicon-book"></i> QL Sách</a></li>
                     <li><a style = "font-size:18px; border-bottom:1px solid #d3d3d3;" href = "borrowing.php"><i class = "glyphicon glyphicon-book"></i> Mượn Sách</a></li>
@@ -56,11 +57,12 @@
 							<thead class = "alert-success">
 								<tr>
 									<th>Mã học sinh</th>
+									<th>Mã định danh</th>
 									<th>Họ</th>
 									<th>Tên đệm</th>
 									<th>Tên</th>
-									<th>Năm học</th>
 									<th>Lớp</th>
+									<th>Năm học</th>
 									<th>Thao tác</th>
 								</tr>
 							</thead>
@@ -70,6 +72,7 @@
 									while($fstudent = $qstudent->fetch_array()){
 								?>
 								<tr>
+								<td><?php echo $fstudent['student_id']?></td>
 									<td><?php echo $fstudent['student_no']?></td>
 									<td><?php echo $fstudent['firstname']?></td>
 									<td><?php echo $fstudent['middlename']?></td>
@@ -91,11 +94,11 @@
 						<div class = "col-lg-6">
 							<form method = "POST" action = "save_student_query.php" enctype = "multipart/form-data">	
 								<div class = "form-group">	
-									<label>Mã học sinh:</label>
+									<label>Mã định danh:</label>
 									<input type = "text" name = "student_no" required = "required" class = "form-control" />
 								</div>	
 								<div class = "form-group">	
-									<label>Họ:</label>
+									<label>Tên:</label>
 									<input type = "text" name = "firstname" required = "required" class = "form-control" />
 								</div>
 								<div class = "form-group">	
@@ -103,15 +106,15 @@
 									<input type = "text" name = "middlename" placeholder = "(Không bắt buộc)" class = "form-control" />
 								</div>	
 								<div class = "form-group">	
-									<label>Tên:</label>
+									<label>Họ:</label>
 									<input type = "text" required = "required" name = "lastname" class = "form-control" />
 								</div>
 								<div class = "form-group">
-									<label>Khóa học:</label>
+									<label>Lớp</label>
 									<input type = "text" required = "required" name = "course" class = "form-control" />
 								</div>	
 								<div class = "form-group">	
-									<label>Năm & Phần:</label>
+									<label>Năm:</label>
 									<input type = "text" maxlength = "12" name = "section" required = "required" class = "form-control" />
 								</div>
 								<div class = "form-group">	
@@ -127,7 +130,7 @@
 		<br />
 		<nav class = "navbar navbar-default navbar-fixed-bottom">
 			<div class = "container-fluid">
-                <label class = "navbar-text pull-right">phần chân trang nằm trong home.php</label>
+                <label class = "navbar-text pull-right">HỆ THỐNG QUẢN LÝ THƯ VIỆN THPT ABC</label>
 			</div>
 		</nav>
 	</body>

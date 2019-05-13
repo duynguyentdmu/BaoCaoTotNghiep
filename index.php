@@ -81,7 +81,7 @@
 		</div>
 		<nav class = "navbar navbar-default navbar-fixed-bottom">
 			<div class = "container-fluid">
-				<label class = "navbar-text pull-right">Hệ thống quản lý thư viện THPT ABC</label>
+				<label class = "navbar-text pull-right">HỆ THỐNG QUẢN LÝ THƯ VIỆN THPT ABC</label>
 			</div>
 		</nav>
 	</body>
